@@ -1,0 +1,13 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .container-example {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container-example > * {
+    width: 100%;
+  }

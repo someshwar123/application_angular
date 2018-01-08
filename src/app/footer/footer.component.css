@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  .example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .first{
+  margin: -3px 3px -29px -13px;
+  color : black;}
+  .second{
+    margin: 14px 2px 4px 3px;
+    color :black;
+  }
+  .third{
+    margin: -14px 0px -2px 2px;
+    color : black;
+  }
