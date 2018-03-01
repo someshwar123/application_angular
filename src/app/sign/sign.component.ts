@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import {FormsModule } from '@angular/forms';
+import { MatDialog } from '@angular/material';
+import { SuccessComponent } from '../success/success.component';
 
 @Component({
   selector: 'app-sign',
@@ -8,7 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(public dialog: MatDialog) { }
+success() {
+  const dialogRef = this.dialog.open(SuccessComponent, {
+    height: '300px' , width: '300px'
+});
+
+
+}
+
 
   ngOnInit() {
   }

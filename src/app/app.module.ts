@@ -11,9 +11,11 @@ import { LoginComponent } from './login/login.component';
 import { SignComponent } from './sign/sign.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule, MatAutocompleteModule, MatIcon, MatFormFieldModule,
-         MatButtonModule, MatToolbarModule, MatIconModule, MatSlideToggleModule, MatDialogModule } from '@angular/material';
+         MatButtonModule, MatToolbarModule, MatIconModule, MatSlideToggleModule, MatDialogModule ,MatProgressBarModule,} from '@angular/material';
 import { HttpModule } from '@angular/http';
 import { FilterPipe } from './filter-pipe';
+import { LoginaccessComponent } from './loginaccess/loginaccess.component';
+import { SuccessComponent } from './success/success.component';
 
 const routes: Routes = [
   {
@@ -27,9 +29,16 @@ const routes: Routes = [
         path: 'sign',
         component: SignComponent
       },
-      { path : 'footer',
-      component : FooterComponent
-      }
+     
+      {
+        path : 'success',
+        component : SuccessComponent
+      }, {
+        path : 'loginaccess',
+        component : LoginaccessComponent
+      },
+      {path: '**', redirectTo: 'header' }
+
  ];
 @NgModule({
   declarations: [
@@ -39,12 +48,14 @@ const routes: Routes = [
     FooterComponent,
     LoginComponent,
     SignComponent,
-     FilterPipe
+     FilterPipe,
+     LoginaccessComponent,
+     SuccessComponent
   ],
   imports: [
     ReactiveFormsModule, FormsModule, BrowserModule, BrowserAnimationsModule, RouterModule.forRoot(routes), MatToolbarModule, 
     MatDialogModule, MatButtonModule, MatSlideToggleModule, MatFormFieldModule, MatInputModule, MatIconModule,
-     HttpModule, MatAutocompleteModule],
+     HttpModule, MatAutocompleteModule,MatProgressBarModule,],
   providers: [FoodOrderService],
   bootstrap: [AppComponent]
 })

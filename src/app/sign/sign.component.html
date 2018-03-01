@@ -1,26 +1,45 @@
-<div class="container-example">
-<mat-form-field>
-  <input  matInput placeholder ="First Name" matTextareaAutosize matAutosizeMinRows="3" 
-  matAutosizeMaxRows="5"  required>
-  </mat-form-field>
-<mat-form-field>
-  <input matInput placeholder =" Last Name" matTextareaAutosize matAutosizeMinRows="3" 
-  matAutosizeMaxRows="5" >
-</mat-form-field>
-<mat-form-field>
-    <input matInput placeholder ="Mobile no" matTextareaAutosize matAutosizeMinRows="3" 
-    matAutosizeMaxRows="5" required>
+<!-- <div class="container-example">
+  <mat-form-field>
+    <input type="text" matInput placeholder="First Name" matTextareaAutosize matAutosizeMinRows="3" matAutosizeMaxRows="5" [(ngModel)]="Firstname"
+      value="" name="firstname" required>
   </mat-form-field>
   <mat-form-field>
-      <input matInput placeholder =" Password" matTextareaAutosize matAutosizeMinRows="3" 
-      matAutosizeMaxRows="5"  required>
-    </mat-form-field>
-    <mat-form-field>
-    <input matInput placeholder =" Retype-Password"matTextareaAutosize matAutosizeMinRows="3" 
-    matAutosizeMaxRows="5"  required>
+    <input matInput placeholder=" Last Name" matTextareaAutosize matAutosizeMinRows="3" matAutosizeMaxRows="5">
   </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Mobile no" matTextareaAutosize matAutosizeMinRows="3" matAutosizeMaxRows="5" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder=" Password" matTextareaAutosize matAutosizeMinRows="3" matAutosizeMaxRows="5" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder=" Retype-Password" matTextareaAutosize matAutosizeMinRows="3" matAutosizeMaxRows="5" required>
+  </mat-form-field>
+  
 </div>
-<div class="button">
-  <button mat-raised-button color="primary">SUBMIT</button>
 
+<div class="button">
+  <button mat-raised-button color="primary" (click)="success()" value="submit">SUBMIT</button>
+</div> -->
+
+
+
+<div class="container">
+
+  <form class="form-signup">
+    <h2 class="form-signup-heading">Please signup</h2>
+    <label for="inputName" class="sr-only"></label>
+    <input type="text" id="inputName" class="form-control" placeholder="First Name" required autofocus>
+    <label for="inputnumber" class="sr-only"></label><br>
+    <input type="text" id="inputnumber" class="form-control" placeholder="Contact Number" required autofocus>
+    <label for="inputEmail" class="sr-only"></label><br>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label><br>
+    <input type="text" id="inputPassword" class="form-control" placeholder="Password" required>
+    <label for="confirmPassword" class="sr-only">Confirm Password</label><br>
+    <input type="text" id="confirmPassword" class="form-control" placeholder="Retype-Password" required>
+   
+    <br>
+    <button  class="btn btn-success" type="submit">Sign up</button> </form>
 </div>
+

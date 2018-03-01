@@ -17,7 +17,7 @@ export class SearchComponent {
   constructor() {
     this.title = 'Search Your area';
   }
-  options = ['MARATHAHALLI', 'SILKBOARD', 'HSR LAYOUT', 'K.R.PURAM', 'KORAMANGALA', 'KUNDALAHALLI', 'WHITEFIELD', 'INDIRANAGAR',];
+  options = ['MARATHAHALLI', 'SILKBOARD', 'HSR LAYOUT', 'K.R.PURAM', 'KORAMANGALA', 'KUNDALAHALLI', 'WHITEFIELD', 'INDIRANAGAR'];
 
   filteredOptions: Observable<string[]>;
 
@@ -35,10 +35,6 @@ export class SearchComponent {
   }
 
 }
-
-
-
-
 
 
 

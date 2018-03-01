@@ -1,16 +1,37 @@
-<div class="example-container">
+<!-- <div class="example-container">
   <mat-form-field>
     <input matInput placeholder="Enter your e-mail" [formControl]="email" required>
-    <textarea matInput matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="6"></textarea>
+    <textarea matInput matTextareaAutosize matAutosizeMinRows="1" matAutosizeMaxRows="2"></textarea>
     <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
   <mat-form-field>
     <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-    <textarea matInput matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="6"></textarea>
+    <textarea matInput matTextareaAutosize matAutosizeMinRows="1" matAutosizeMaxRows="8"></textarea>
   </mat-form-field>
 </div>
-<div class="button">
-  <button mat-raised-button color="primary">SUBMIT</button>
+<div>
+ <button><a routerLink="/loginaccess">Login</a></button>  
+ <router-outlet></router-outlet>
+</div> -->
+<div class="container">
+
+  <form class="form-signin">
+    <h2 class="form-signin-heading">Please sign in</h2><br>
+    <label for="inputEmail" class="sr-only">Email address</label><br>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label><br>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button><a routerLink="/loginaccess">Sign in</a></button>
+
+  </form>
+
 
 </div>
+
+<router-outlet></router-outlet>
