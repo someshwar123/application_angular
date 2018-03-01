@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import {Router,ActivatedRoute} from '@angular/router';
 
 
 
@@ -11,7 +11,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   // openlogin() {
   //   const dialogRef = this.dialog.open(LoginComponent, {
@@ -32,7 +32,18 @@ export class HeaderComponent implements OnInit {
   //   });
   // }
 
-  ngOnInit() {
+  // goHome() {
+  //   this.router.navigate(['']); 
+  // }
+
+  // goSignup() {
+  //   this.router.navigate(['sign']); 
+  // }
+  // gologin() {
+  //   this.router.navigate(['login']); 
+  // }
+
+ ngOnInit() {
   }
 
 }
